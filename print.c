@@ -1,44 +1,54 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <string.h>
+#include <stdlib.h>
 #include "main.h"
 
 int _printf(const char *format, ...)
 {
 	int count = 0;
 	const char *ptr = format;
+	char *format_copy = NULL;
 
 	va_list args;
 	va_start(args, format);
+
+	format_copy = malloc (strlen(format) + 1);
+	if (format_copy == NULL)
+	{
+		return (-1);
+	}
+
+	strcpy(format_copy, format);
 
 	while (*ptr != '\0')
 	{
 		if (*ptr == '%')
 		{
 			ptr++; /* moves past the '%'*/
-
-			/* check if the next character is a valid conversion specifier*/
-			if (*ptr == 'c' || *ptr == 's' || *ptr == '%')
+			if (*ptr == '\0')
 			{
-				if (*ptr == 'c')
-				{
-					int ch = va_arg(args, int);
-					putchar(ch);
-					count++;
-				}
-				/*handle string argument*/
-				else if (*ptr == 's')
-				{
-					const char *str = va_arg(args, const char *);
-					fputs(str, stdout);
-					count += strlen(str);
-				}
-				/* handle '%' character*/
-				else if (*ptr == '%')
-				{
-					putchar('%');
-					count++;
-				}
+				free(format_copy);
+				return (-1);
+			}
+			else if (*ptr == 'c')
+			{
+				int ch = va_arg(args, int);
+				putchar(ch);
+				count++;
+			}
+			/*handle string argument*/
+			else if (*ptr == 's')
+			{
+				const char *str = va_arg(args, const char *);
+				fputs(str, stdout);
+				count += strlen(str);
+			}
+			/* handle '%' character*/
+			else if (*ptr == '%')
+			{
+				putchar('%');
+				count++;
 			}
 			/* if the next character is not a valid conversion specifier, print it as is*/
 			else
@@ -56,6 +66,9 @@ int _printf(const char *format, ...)
 		}
 		ptr++; /* move to the next character*/
 	}
+
+	free(format_copy);
+
 	va_end(args);
 	return (count);
 }
