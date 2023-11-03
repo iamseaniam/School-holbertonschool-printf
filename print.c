@@ -3,15 +3,27 @@
 #include <string.h>
 #include <stdlib.h>
 #include "main.h"
-
+/**
+ *_printf - Custom printf function.
+ *@format: A format string containing format specifiers.
+ *@...: Variable number of arguments to be formatted and printed.
+ *
+ *Return: The number of characters printed (excluding the null terminator).
+ *Returns -1 on error.
+ */
 int _printf(const char *format, ...)
 {
+
 	int count = 0;
 	const char *ptr = format;
 	char *format_copy = NULL;
 
 	va_list args;
 	va_start(args, format);
+
+	if (format == NULL) {
+		return (-1);
+	}
 
 	format_copy = malloc (strlen(format) + 1);
 	if (format_copy == NULL)
