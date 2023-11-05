@@ -1,1 +1,42 @@
-![Alt text](URL "https://cdn.discordapp.com/attachments/791897396061143041/1170527600892989561/image.png?ex=65595dc7&is=6546e8c7&hm=4466f1e2a486221bc565ee66f7712069f369f6db94872b7cc576edeb6fac34ea&")
+                                         
+PPPPPPPPPPPPPPPPP                        iiii                            tttt             ffffffffffffffff  
+P::::::::::::::::P                      i::::i                        ttt:::t            f::::::::::::::::f 
+P::::::PPPPPP:::::P                      iiii                         t:::::t           f::::::::::::::::::f
+PP:::::P     P:::::P                                                  t:::::t           f::::::fffffff:::::f
+  P::::P     P:::::Prrrrr   rrrrrrrrr  iiiiiiinnnn  nnnnnnnn    ttttttt:::::ttttttt     f:::::f       ffffff
+  P::::P     P:::::Pr::::rrr:::::::::r i:::::in:::nn::::::::nn  t:::::::::::::::::t     f:::::f             
+  P::::PPPPPP:::::P r:::::::::::::::::r i::::in::::::::::::::nn t:::::::::::::::::t    f:::::::ffffff       
+  P:::::::::::::PP  rr::::::rrrrr::::::ri::::inn:::::::::::::::ntttttt:::::::tttttt    f::::::::::::f       
+  P::::PPPPPPPPP     r:::::r     r:::::ri::::i  n:::::nnnn:::::n      t:::::t          f::::::::::::f       
+  P::::P             r:::::r     rrrrrrri::::i  n::::n    n::::n      t:::::t          f:::::::ffffff       
+  P::::P             r:::::r            i::::i  n::::n    n::::n      t:::::t           f:::::f             
+  P::::P             r:::::r            i::::i  n::::n    n::::n      t:::::t    tttttt f:::::f             
+PP::::::PP           r:::::r           i::::::i n::::n    n::::n      t::::::tttt:::::tf:::::::f            
+P::::::::P           r:::::r           i::::::i n::::n    n::::n      tt::::::::::::::tf:::::::f            
+P::::::::P           r:::::r           i::::::i n::::n    n::::n        tt:::::::::::ttf:::::::f            
+PPPPPPPPPP           rrrrrrr           iiiiiiii nnnnnn    nnnnnn          ttttttttttt  fffffffff            
+                                                                                                               
+## Description
+	The printf family of functions in the C programming language are a set of functions that take a
+	format string as input among a variable sized list of other values and produce as output a string
+	that corresponds to the format specifier and given input values.
+
+## Dependencies
+
+	main.h
+	p-get_rune_func.c
+	print.c
+
+## Programs
+
+	_printf
+	rune_d
+	rune_u
+	rune_f
+	rune_c
+	rune_s
+
+## Authors
+
+	Sean Montgomery
+        Jesse Brumley
