@@ -1,20 +1,28 @@
 #ifndef MAIN_H
 #define MAIN_H
+#include <stdio.h>
+#include <stdarg.h>
+#include <string.h>
+#include <stdlib.h>
 
-typedef struct
+/**
+ * frog - structure represents string 'skittle' and calls function 'd' to it
+ * rune - processes format specifier determined by get_rune
+ * get_rune - gets the format specifier
+ * print_char - prints a single character
+ * print_string - prints a string
+ * _printf - prints characters or string of characters with multiple variables
+ */
+struct frog
 {
 	char *skittle;
 	int (*d)(int);
-} frog;
+};
+int rune(int value, char format);
+int get_rune(char s, int value);
+int process_format(const char *format, va_list args);
+int print_char(va_list args);
+int print_string(va_list args);
+int _printf(const char *format, ...);
 
-int rune_d(int); /* %d or %i: printing signed decimal integers*/
-int rune_u(int); /* %u: printing unsigned decimal integers*/
-int rune_f(int); /* %f: printing floating-point numbers*/
-int rune_c(int); /* %c: printing characters*/
-int rune_s(int); /* %s: printing strings*/
-int rune_x(int); /* %x or %X: printing hexadecimal integers*/
-int rune_o(int); /* %o: printing octal integers*/
-int rune_p(int); /* %p: printing pointers*/
-int (*get_rune_func(char *s))(int);
-int _printf(const char *format, ...); /* Prototype for Print.c */
 #endif

@@ -24,17 +24,21 @@ PPPPPPPPPP           rrrrrrr           iiiiiiii nnnnnn    nnnnnn          tttttt
 ## Dependencies
 
 	main.h
-	p-get_rune_func.c
 	print.c
+	process_format.c
+	print_char.c
+	print_string.c
+	get_rune.c
+	rune.c
 
 ## Programs
 
 	_printf
-	rune_d
-	rune_u
-	rune_f
-	rune_c
-	rune_s
+	process_format
+	print_char
+	print_string
+	get_rune
+	rune
 
 ## Authors
 
