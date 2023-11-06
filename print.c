@@ -46,13 +46,8 @@ int _printf(const char *format, ...)
 			}
 			else if (*ptr == 'd' || *ptr == 'i')
 			{
-				int num = va_arg(args, int);
-				int (*func)(int) = get_rune_func("d");
-				if (func != NULL)
-				{
-					func(num);
-					count++;
-				}
+				int value = va_arg(args, int);
+				return rune_d(value);
 			}
 			else if (*ptr == 'c')
 			{
