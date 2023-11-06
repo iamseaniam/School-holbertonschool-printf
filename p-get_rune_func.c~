@@ -12,6 +12,29 @@ int rune_d(int value)
 	printf("%d", value);
 	return (0);
 }
+
+/**
+ *rune_u - Print an unsigned integer value.
+ *@value: The unsigned integer value to be printed.
+ *Return: Always returns 0.
+ */
+int rune_u(int value)
+{
+	printf("%u", value);
+	return (0);
+}
+
+/**
+ *rune_f - Print a float value.
+ *@value: The integer representation of a float value to be printed.
+ *Return: Always returns 0.
+ */
+int rune_f(int value)
+{
+	float f_value = *(float*)&value;
+	printf("%f", f_value);
+	return (0);
+}
 /**
  *rune_c - Print a character value.
  *@value: The character value to be printed.
@@ -44,6 +67,8 @@ int (*get_rune_func(char *s))(int)
 	frog sword[] = {
 		{"d", rune_d},
 		{"i", rune_d},
+		{"u", rune_u},
+		{"f", rune_f},
 		{"c", rune_c},
 		{"s", rune_s},
 		{NULL, NULL}
