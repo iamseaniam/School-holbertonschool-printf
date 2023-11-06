@@ -11,7 +11,7 @@ int print_string(va_list args)
 	if (str)
 	{
 		fputs(str, stdout);
-		return (strlen(str));
+		return strlen(str);
 	}
 	else
 	{
