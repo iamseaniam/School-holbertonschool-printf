@@ -55,7 +55,7 @@ int (*get_rune_func(char *s))(int)
 	{
 		if (strcmp(sword[i].skittle, s) == 0)
 		{
-			return (sword[i].d);
+			return (sword[i].f);
 		}
 		i++;
 	}
