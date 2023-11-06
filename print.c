@@ -19,6 +19,7 @@ int _printf(const char *format, ...)
 	char *format_copy = NULL;
 
 	va_list args;
+
 	va_start(args, format);
 
 	if (format == NULL) {
@@ -42,6 +43,16 @@ int _printf(const char *format, ...)
 			{
 				free(format_copy);
 				return (-1);
+			}
+			else if (*ptr == 'd' || *ptr == 'i')
+			{
+				int num = va_arg(args, int);
+				int (*func)(int) = get_rune_func("d");
+				if (func != NULL)
+				{
+					func(num);
+					count++;
+				}
 			}
 			else if (*ptr == 'c')
 			{
