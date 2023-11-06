@@ -66,12 +66,6 @@ int _printf(const char *format, ...)
 				putchar('%');
 				count++;
 			}
-			else
-			{
-				putchar('%');
-				putchar(*ptr);
-				count += 2;
-			}
 		}
 		else
 		{

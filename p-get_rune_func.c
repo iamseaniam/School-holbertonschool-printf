@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <string.h>
 #include "main.h"
-
 /**
  *rune_d - Print an integer value.
  *@value: The integer value to be printed.
@@ -9,7 +6,7 @@
  */
 int rune_d(int value)
 {
-	printf("%d", value);
+	putchar_file(value + '0', stdout);
 	return (0);
 }
 /**
@@ -19,7 +16,7 @@ int rune_d(int value)
  */
 int rune_c(int value)
 {
-	printf("%c", value);
+	putchar_file(value, stdout);
 	return (0);
 }
 
@@ -30,9 +27,15 @@ int rune_c(int value)
  */
 int rune_s(int value)
 {
+	int i;
+
 	const char *str = (const char *)&value;
-	printf("%s", str);
-	return strlen(str);
+	int length = strlen(str);
+	for (i = 0; i < length; i++)
+	{
+		putchar_file(str[i], stdout);
+	}
+	return (length);
 }
 /**
  *get_rune_func - Get a function pointer based on a character.
