@@ -9,8 +9,8 @@
  */
 int rune_d(int value)
 {
-	printf("%d", value);
-	return (0);
+	int count = printf("%d", value);
+	return (count);
 }
 
 /**
