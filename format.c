@@ -25,8 +25,14 @@ int format(char format, va_list args)
 		}
 	}
 
-	_putstring("Unknown format specifier: ");
-	_putchar(format);
-	_putchar('\n');
-	return (-1);
+	if (format == 's')
+	{
+		const char format_str[2]
+
+		format_str[0] = format;
+		format_str[1] = '\0';
+		write(1, format_str, 1);
+		write(1, "\n", 1);
+		return (-1);
+	}
 }
