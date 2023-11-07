@@ -1,1 +1,30 @@
-wip man page
+.TH _PRINTF 3 "November 7, 2023"
+.SH NAME
+\_printf \- custom printf-like function
+.SH SYNOPSIS
+.in +4
+.nf
+.B \#include <stdio.h>
+.B \#include <stdarg.h>
+.B \#include "main.h"
+.PP
+.B int \_printf(const char *format, ...);
+.fi
+.in -4
+.SH DESCRIPTION
+The \_printf function is a custom implementation of the printf function in C. It allows for formatted output to the standard output stream (stdout).
+
+The function processes a format string and a variable number of arguments and produces formatted output according to the format specifiers in the format string. Supported format specifiers include %d (decimal integer), %c (character), %s (string), and %% (literal %).
+
+The function behaves similarly to the standard printf function, with some basic formatting support. It is suitable for basic output formatting but does not support the full range of features found in the standard library's printf function.
+.SH RETURN VALUE
+The \_printf function returns the number of characters printed (excluding the null terminator). In case of an error, it returns -1.
+.SH AUTHOR
+Sean Montgomery sean.alexander613@gmail.com
+.SH REPORTING BUGS
+Report bugs to sean.alexander613@gmail.com.
+.SH SEE ALSO
+.B printf(3), snprintf(3), va_arg(3)
+.SH COPYRIGHT
+This is free and unencumbered software released into the public domain.
+
