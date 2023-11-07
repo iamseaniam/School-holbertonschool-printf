@@ -1,16 +1,18 @@
-	iustom Implementation
+# Printf
 
 ## Introduction
 
 This is a custom implementation of the `printf` function, allowing you to format and print text in a variety of ways. It provides support for a subset of format specifiers similar to the standard `printf`.
 
-## Table of Contents
+<details>
+<summary><strong>Table of Contents</strong></summary>
 
 - [List of Format Specifiers](#list-of-format-specifiers)
 - [List of Headers](#list-of-headers)
 - [Prototypes](#prototypes)
 - [Flowchart](#flowchart)
 - [Clone Link](#clone-link)
+</details>
 
 ## List of Format Specifiers
 
@@ -60,6 +62,5 @@ This format specifier is used for formatting and printing decimal numbers.
 You can clone this project from the following repository:
 
 ```sh
-git clone https://github.com/chapmanhunt4/holbertonschool-printf.git
-
+git clone https://github.com/iamseaniam/holbertonschool-printf.git
 
