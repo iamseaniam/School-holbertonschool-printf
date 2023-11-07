@@ -6,7 +6,7 @@
  */
 int rune_d(int value)
 {
-	putchar_file(value + '0', stdout);
+	putchar_file(value + '0');
 	return (0);
 }
 /**
@@ -16,7 +16,7 @@ int rune_d(int value)
  */
 int rune_c(int value)
 {
-	putchar_file(value, stdout);
+	putchar_file(value);
 	return (0);
 }
 
@@ -33,7 +33,7 @@ int rune_s(int value)
 	int length = strlen(str);
 	for (i = 0; i < length; i++)
 	{
-		putchar_file(str[i], stdout);
+		putchar_file(str[i]);
 	}
 	return (length);
 }
