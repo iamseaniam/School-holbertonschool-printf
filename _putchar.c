@@ -5,13 +5,13 @@
  * @c: char to print
  * Return: 1 if sucess, -1 if failure
  */
-int _putchar(char c)
+int _putchar(va_list args)
 {
-	char buffer[1], character;
+	char buffer[1];
 	int bytes_written;
 
-	buffer[0] = c;
-	character = (char)c
+	buffer[0] = va_arg(args, int);
+	
 	bytes_written = write(1, buffer, 1);
 
 	if (bytes_written == -1)
