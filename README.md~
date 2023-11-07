@@ -1,18 +1,15 @@
-# Printf
 
 ## Introduction
 
 This is a custom implementation of the `printf` function, allowing you to format and print text in a variety of ways. It provides support for a subset of format specifiers similar to the standard `printf`.
 
-<details>
-<summary><strong>Table of Contents</strong></summary>
+## Table of Contents
 
 - [List of Format Specifiers](#list-of-format-specifiers)
 - [List of Headers](#list-of-headers)
 - [Prototypes](#prototypes)
 - [Flowchart](#flowchart)
 - [Clone Link](#clone-link)
-</details>
 
 ## List of Format Specifiers
 
@@ -63,4 +60,5 @@ You can clone this project from the following repository:
 
 ```sh
 git clone https://github.com/iamseaniam/holbertonschool-printf.git
+
 
