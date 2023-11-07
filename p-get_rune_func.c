@@ -69,7 +69,7 @@ int rune_s(int value)
  *@s: The character to look up in the function pointer array.
  *Return: A function pointer corresponding to the character, or NULL if not found.
  */
-int (*get_rune_func(char *s))(va_list)
+int (*get_rune_func(char *s))(int)
 {
 	frog sword[] = {
 		{"d", rune_d},
