@@ -27,9 +27,9 @@ int rune_d(int value)
 	int i;
 	char buffer[30];
 	int count = 0;
-/*
-*	snprintf(buffer, sizeof(buffer), "%d", value);
-*/
+
+	snprintf(buffer, sizeof(buffer), "%d", value);
+
 	for (i = 0; buffer[i] != '\0'; i++)
 	{
 		count += putchar_file(buffer[i]);
