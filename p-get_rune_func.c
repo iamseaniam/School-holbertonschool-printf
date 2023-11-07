@@ -4,7 +4,7 @@
 
 int putchar_file(char c)
 {
-	char buffer[1];
+/*	char buffer[1];*/
 	int bytes_written;
 
 /*	buffer[0] = c; */

@@ -9,7 +9,7 @@ int putchar_file(char c)
 
 /*	buffer[0] = c; */
 
-	bytes_written = write(1, buffer, 1);
+	bytes_written = write(1, &c, 1);
 
 	if (bytes_written == -1)
 	{
