@@ -8,14 +8,11 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
+	int count;
 
 	va_start(args, format);
-
-	int count = process(format, args);
-
+	count = process(format, args);
 	va_end(args);
 
 	return (count);
-
-	return (0);
 }

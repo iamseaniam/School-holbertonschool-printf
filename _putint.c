@@ -2,7 +2,7 @@
 
 /**
  * _putint - prints an integer value
- * @value: The integer value to be printed
+ * @args: The integer value to be printed
  * Return: The number of digits printed
  */
 int _putint(va_list args)
