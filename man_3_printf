@@ -1,4 +1,4 @@
-npage for _printf
+manpage for _printf
 .TH man 3 '07 November 2023" "1.0" "_printf man page"
 .SH NAME
 _printf \- custom printf implementation

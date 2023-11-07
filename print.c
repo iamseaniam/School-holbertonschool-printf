@@ -11,6 +11,23 @@
  *Return: The number of characters printed (excluding the null terminator).
  *Returns -1 on error.
  */
+
+int main(void)
+{
+		int len, len2;
+
+			len = _printf("There is %d bytes in %d KB\n", 1024, 1);
+				len2 = printf("There is %d bytes in %d KB\n", 1024, 1);
+					fflush(stdout);
+						if (len != len2)
+								{
+											printf("Lengths differ.\n");
+													fflush(stdout);
+															return (1);
+																}
+							return (0);
+}
+
 int _printf(const char *format, ...)
 {
 	int count = 0;
@@ -48,6 +65,7 @@ int _printf(const char *format, ...)
 			{
 				int value = va_arg(args, int);
 				count += rune_d(value);
+
 			}
 			else if (*ptr == 'c')
 			{
