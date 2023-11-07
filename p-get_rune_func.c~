@@ -26,6 +26,7 @@ int putchar_file(char c)
 int rune_d(int value)
 {
 	int count = rune_s(value);
+	putchar_file(' ');
 	count++;
 	count += rune_s(value);
 	return count;
