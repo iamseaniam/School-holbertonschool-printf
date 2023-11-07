@@ -2,7 +2,6 @@
 #include <unistd.h>
 #include "main.h"
 
-int putchar_file(char c);
 int putchar_file(char c)
 {
 	char buffer[1];
@@ -26,7 +25,7 @@ int putchar_file(char c)
 int rune_d(int value)
 {
 	int i;
-	char buffer[12];
+	char buffer[30];
 	int count = 0;
 
 	snprintf(buffer, sizeof(buffer), "%d", value);
