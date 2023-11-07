@@ -10,7 +10,7 @@ typedef struct
 	int (*f)(int);
 } frog;
 
-int _putchar(char c);
+int putchar_file(char c);
 int rune_d(int); /* %d or %i: printing signed decimal integers*/
 int rune_f(int); /* %f: printing floating-point numbers*/
 int rune_c(int); /* %c: printing characters*/
