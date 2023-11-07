@@ -47,7 +47,7 @@ int _printf(const char *format, ...)
 			else if (*ptr == 'd' || *ptr == 'i')
 			{
 				int value = va_arg(args, int);
-				count =+ rune_d(value);
+				count += rune_d(value);
 			}
 			else if (*ptr == 'c')
 			{
