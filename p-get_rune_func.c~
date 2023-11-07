@@ -25,8 +25,8 @@ int putchar_file(char c)
  */
 int rune_d(int value)
 {
-	putchar_file(value + '0');
-	return (rune_s(value));
+	putchar_file(value);
+	return (0);
 }
 /**
  *rune_c - Print a character value.
