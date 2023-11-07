@@ -1,15 +1,14 @@
 #include "main.h"
 
 /**
- * print_int - prints an integer value
+ * _putint - prints an integer value
  * @value: The integer value to be printed
  * Return: The number of digits printed
  */
-int print_int(int value)
+int _putint(int value)
 {
 	char buffer[12], temp;
-	int index, is_negative, char_count;
-	int i, j, k;
+	int index, is_negative, char_count, i, j, k;
 
 	index = 0;
 	is_negative = 0;
@@ -40,7 +39,7 @@ int print_int(int value)
 	}	buffer[index] = '\0';
 
 	for (k = 0; k < index; k++)
-		putchar(buffer[k]);
+		_putchar(buffer[k]);
 
 	return (char_count);
 }

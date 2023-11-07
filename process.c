@@ -7,37 +7,33 @@
  */
 int process(const char *s, va_list args)
 {
-	int count = 0;
+	int count = 0, i;
 
 	while (*s)
 	{
 		if (*s == '%' && s[1])
 		{
-			if (s[1] == 'c' || s[1] == 's' || s[1] == 'd' || s[1] == 'i')
+			if (s[1] == '%')
 			{
-				char format_specifier;
-
-				format_specifier  = s[1];
-				count += format(format_specifier, args);
-				s += 2;
-			}
-			else if (s[1] == '%')
-			{
-				putchar('%');
+				_putchar('%');
 				count++;
 				s += 2;
 			}
 			else
 			{
-				putchar('%');
-				putchar(s[1]);
-				count += 2;
-				s += 2;
+				for (i = 0; sword[i].specifier != NULL; i++)
+				{
+					if (sword[i].specifier[0] == s[1])
+					{
+						count += sword[i].function(args);
+						s += 2;
+						break;
+					}
+				}
 			}
-		}
-		else
+		} else
 		{
-			putchar(*s);
+			_putchar(*s);
 			count++;
 			s++;
 		}

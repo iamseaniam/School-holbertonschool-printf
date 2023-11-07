@@ -1,24 +1,32 @@
 #ifndef MAIN_H
 #define MAIN_H
+
 #include <stdio.h>
 #include <stdarg.h>
 #include <string.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 /**
- * _printf - prints characters or string of characters with multiple variables
- * process - processes the format specifier
- * format - passes format and value to correct function to be printed
- * print int - converts integers into a string and passes to print function
- * print_char - prints a single character
- * print_string - prints a string
+ * struct frog - Format specifier and associated function pointer.
+ * @specifier: A pointer to a string representing the format specifier.
+ * @function: A function pointer to the corresponding format function.
  */
+typedef struct frog
+{
+	char *specifier;
+	int (*function)(va_list args);
+} frog;
 
-int _printf(const char *format, ...);
-int process(const char *format, va_list args);
+/* Declaring the sword array present in format.c */
+extern frog sword[];
+
+/* Function prototypes */
 int format(char format, va_list args);
-int print_int(int value);
-int print_char(va_list args);
-int print_string(va_list args);
+int process(const char *format, va_list args);
+int _printf(const char *format, ...);
+int _putint(int value);
+int _putstring(va_list args);
+int _putchar(char c);
 
 #endif
