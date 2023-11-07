@@ -12,7 +12,6 @@ typedef struct
 
 int putchar_file(char c);
 int rune_d(int); /* %d or %i: printing signed decimal integers*/
-int rune_f(int); /* %f: printing floating-point numbers*/
 int rune_c(int); /* %c: printing characters*/
 int rune_s(int); /* %s: printing strings*/
 int (*get_rune_func(char *s))(int);
