@@ -25,12 +25,12 @@ int putchar_file(char c)
  */
 int rune_d(int value)
 {
+	int i;
 	char buffer[12];
 	int count = 0;
 
 	snprintf(buffer, sizeof(buffer), "%d", value);
 
-	int i;
 	for (i = 0; buffer[i] != '\0'; i++)
 	{
 		count += putchar_file(buffer[i]);

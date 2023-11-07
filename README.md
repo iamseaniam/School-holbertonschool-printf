@@ -1,46 +1,65 @@
-                                         
-PPPPPPPPPPPPPPPPP                        iiii                            tttt             ffffffffffffffff  
-P::::::::::::::::P                      i::::i                        ttt:::t            f::::::::::::::::f 
-P::::::PPPPPP:::::P                      iiii                         t:::::t           f::::::::::::::::::f
-PP:::::P     P:::::P                                                  t:::::t           f::::::fffffff:::::f
-  P::::P     P:::::Prrrrr   rrrrrrrrr  iiiiiiinnnn  nnnnnnnn    ttttttt:::::ttttttt     f:::::f       ffffff
-  P::::P     P:::::Pr::::rrr:::::::::r i:::::in:::nn::::::::nn  t:::::::::::::::::t     f:::::f             
-  P::::PPPPPP:::::P r:::::::::::::::::r i::::in::::::::::::::nn t:::::::::::::::::t    f:::::::ffffff       
-  P:::::::::::::PP  rr::::::rrrrr::::::ri::::inn:::::::::::::::ntttttt:::::::tttttt    f::::::::::::f       
-  P::::PPPPPPPPP     r:::::r     r:::::ri::::i  n:::::nnnn:::::n      t:::::t          f::::::::::::f       
-  P::::P             r:::::r     rrrrrrri::::i  n::::n    n::::n      t:::::t          f:::::::ffffff       
-  P::::P             r:::::r            i::::i  n::::n    n::::n      t:::::t           f:::::f             
-  P::::P             r:::::r            i::::i  n::::n    n::::n      t:::::t    tttttt f:::::f             
-PP::::::PP           r:::::r           i::::::i n::::n    n::::n      t::::::tttt:::::tf:::::::f            
-P::::::::P           r:::::r           i::::::i n::::n    n::::n      tt::::::::::::::tf:::::::f            
-P::::::::P           r:::::r           i::::::i n::::n    n::::n        tt:::::::::::ttf:::::::f            
-PPPPPPPPPP           rrrrrrr           iiiiiiii nnnnnn    nnnnnn          ttttttttttt  fffffffff            
-                                                                                                               
-## Description
-	The printf family of functions in the C programming language are a set of functions that take a
-	format string as input among a variable sized list of other values and produce as output a string
-	that corresponds to the format specifier and given input values.
+	iustom Implementation
 
-## Dependencies
+## Introduction
 
-	main.h
-	print.c
-	process.c
-	format.c
-	_putchar.c
-	_putstring.c
-	_putint.c
+This is a custom implementation of the `printf` function, allowing you to format and print text in a variety of ways. It provides support for a subset of format specifiers similar to the standard `printf`.
 
-## Programs
+## Table of Contents
 
-	printf
-	process
-	format
-	_putchar
-	_putstring
-	_putint
+- [List of Format Specifiers](#list-of-format-specifiers)
+- [List of Headers](#list-of-headers)
+- [Prototypes](#prototypes)
+- [Flowchart](#flowchart)
+- [Clone Link](#clone-link)
 
-## Authors
+## List of Format Specifiers
 
-	Sean Montgomery
-	Jesse Brumley
+### `%s` - Format / Print Strings
+
+This format specifier is used for formatting and printing strings.
+
+### `%c` - Format / Print Characters
+
+This format specifier is used for formatting and printing characters.
+
+### `%i` - Format / Print Integers
+
+This format specifier is used for formatting and printing integers.
+
+### `%d` - Format / Print Decimal Numbers
+
+This format specifier is used for formatting and printing decimal numbers.
+
+## List of Headers
+
+- `#include "main.h"`
+- `#include <stdio.h>`
+- `#include <stdlib.h>`
+- `#include <string.h>`
+- `#include <stdarg.h>`
+- `#include <unistd.h>`
+- `#include <limits.h>`
+- `#include <stddef.h>`
+
+## Prototypes
+
+- `int get_spec_func(char *str, va_list args, int i)`
+- `int print_char(va_list args)`
+- `int print_string(va_list args)`
+- `int print_digit(va_list args)`
+- `int _putchar(char c)`
+- `int _strlen(const char *str)`
+- `int _printf(char *format, ...)`
+
+## Flowchart
+
+![Flowchart](link_to_your_flowchart_image.png)
+
+## Clone Link
+
+You can clone this project from the following repository:
+
+```sh
+git clone https://github.com/chapmanhunt4/holbertonschool-printf.git
+
+
